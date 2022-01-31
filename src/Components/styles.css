@@ -36,9 +36,9 @@ button:hover{
 .section{
     margin-top: 10vh;
     vertical-align: middle;
-    width: 50%;
+    min-width: 50%;
     float: left;
-    height: 75vh;
+    height: auto;
 }
 
 .row_container{
