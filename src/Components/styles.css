@@ -1,0 +1,59 @@
+.cell_style{
+    background-color: #ff8906;
+    font-size: 34px;
+    height: 20vh;
+    width: 20vh;
+    border: 2px solid #e53170;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.heading{
+    text-align: center;
+    height: 10vh;
+    color: #fffffe;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:#fffffe;
+}
+
+button{
+    padding: 20px 30px;
+    color: #fffffe;
+    border: none;
+    background-color: #ff8906;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(0.9,0.9);
+    background-color: #e53170;
+
+}
+
+.section{
+    margin-top: 10vh;
+    vertical-align: middle;
+    width: 50%;
+    float: left;
+    height: 75vh;
+}
+
+.row_container{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+}
+
+.col_container{
+    margin: auto;
+}
+
+.cell_style:hover{
+    background-color: #f25f4c;
+}
