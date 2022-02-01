@@ -1,6 +1,8 @@
 import React from 'react';
 import Cell from '../Components/Cell'
 import '../Components/styles.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import {Container,Col,Row} from 'react-bootstrap';
 
 class Board extends React.Component
 {
@@ -66,33 +68,35 @@ class Board extends React.Component
         else
             status = 'This is ' + (this.state.xisNext? 'X' : 'O') + '\'s turn';
         return(
-            <>
-                <div className='heading'>
-                    <h1>Welcome to the Game World!!!</h1>
-                </div>
-                <div className='section'>
-                    <div className='row_container'>
-                        <div className='col_container'> {this.rendercell(0)} </div>
-                        <div className='col_container'> {this.rendercell(1)} </div>
-                        <div className='col_container'> {this.rendercell(2)} </div>
-                    </div>
-                    <div className='row_container'>
-                        <div className='col_container'> {this.rendercell(3)} </div>
-                        <div className='col_container'> {this.rendercell(4)} </div>
-                        <div className='col_container'> {this.rendercell(5)} </div>
-                    </div>
-                    <div className='row_container'>
-                        <div className='col_container'> {this.rendercell(6)} </div>
-                        <div className='col_container'> {this.rendercell(7)} </div>
-                        <div className='col_container'> {this.rendercell(8)} </div>
-                    </div>                
-                </div>
-                <div className='section'>
-                    <h1>Tic-Tac-Toe Game</h1>
-                    <h2>{status}</h2>                
-                    <button onClick={this.handleRestart.bind(this)}>Restart</button>
-                </div>
-            </>
+            <Container>
+                <Row>
+                    <h1 className='heading'>Welcome to the Game World!!!</h1>
+                </Row>
+                <Row style={{padding:"0px"}}>
+                    <Col sm="6" className='section'>
+                        <div className='row_container'>
+                            <div className='col_container'> {this.rendercell(0)} </div>
+                            <div className='col_container'> {this.rendercell(1)} </div>
+                            <div className='col_container'> {this.rendercell(2)} </div>
+                        </div>
+                        <div className='row_container'>
+                            <div className='col_container'> {this.rendercell(3)} </div>
+                            <div className='col_container'> {this.rendercell(4)} </div>
+                            <div className='col_container'> {this.rendercell(5)} </div>
+                        </div>
+                        <div className='row_container'>
+                            <div className='col_container'> {this.rendercell(6)} </div>
+                            <div className='col_container'> {this.rendercell(7)} </div>
+                            <div className='col_container'> {this.rendercell(8)} </div>
+                        </div>                
+                    </Col>
+                    <Col lg className='section'>
+                        <h1 className='game_data'>Tic-Tac-Toe Game</h1>
+                        <h2 className='game_data'>{status}</h2>                
+                        <button onClick={this.handleRestart.bind(this)}>Restart</button>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }

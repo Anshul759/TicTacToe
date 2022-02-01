@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
 .cell_style{
     background-color: #ff8906;
     font-size: 34px;
@@ -11,12 +15,16 @@
 
 .heading{
     text-align: center;
-    height: 10vh;
     color: #fffffe;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 35px;
 }
 
-h1,h2,h3,h4,h5,h6{
+.game_data{
     color:#fffffe;
+    margin: 5vh 2vw ;
+    font-family: 'Titan One', cursive;
+    font-size: 30px;
 }
 
 button{
@@ -24,6 +32,7 @@ button{
     color: #fffffe;
     border: none;
     background-color: #ff8906;
+    font-family: 'Supermercado One', cursive;
 }
 
 button:hover{
@@ -34,11 +43,8 @@ button:hover{
 }
 
 .section{
-    margin-top: 10vh;
-    vertical-align: middle;
-    min-width: 50%;
-    float: left;
-    height: auto;
+    padding: 10vh !important;
+    vertical-align: middle !important;
 }
 
 .row_container{
